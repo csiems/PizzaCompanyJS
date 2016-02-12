@@ -11,3 +11,7 @@ h2 {
 .row {
   padding: 10px;
 }
+
+td {
+  margin: 10px;
+}

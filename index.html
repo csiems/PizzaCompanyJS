@@ -42,9 +42,9 @@
         </div>
         <div class="row" id="topping-select">
           <p>Choose your toppings on the left</p>
-          <ul id="my-pie-list">
-
-          </ul>
+          <table class="table" id="my-pie-list">
+            <tr><td class="regular">Cheese</td><td><button type="button" class="btn btn-info btn-xs" id="Remove-Cheese"><span class="glyphicon glyphicon-trash"></span></button></td><tr>
+          </table>
         </div>
         <div class="row">
           <p>Is this for take out or delivery?</p>
@@ -68,7 +68,7 @@
             <option val="green peppers">green peppers</option>
             <option val="onions">onions</option>
           </select>
-          <input type="button" id="add-toppings" value="Add">
+          <input type="button" id="add-reg-toppings" value="Add">
         </div>
         <div class="row" id="prem-toppings">
           <h1>Premium Toppings:</h1>

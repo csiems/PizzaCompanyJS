@@ -1,14 +1,15 @@
 $(document).ready(function() {
-  $("#add-toppings").on("click", function () {
+  $("#add-reg-toppings").on("click", function () {
     var topping = $("#select-reg-toppings").val();
 
-    $("ul#my-pie-list").append("<li class='regular'>" + topping + "</li>")
-
+    $("table#my-pie-list").append("<tr><td class='regular'>" + topping + "</td><td><button type='button' class='btn btn-info btn-xs' id='Remove-" + topping + "'><span class='glyphicon glyphicon-trash'></span></button></td><tr>");
   });
 
   $("#add-prem-toppings").on("click", function () {
     var topping = $("#select-prem-toppings").val();
-    $("ul#my-pie-list").append("<li class='premium'>" + topping + "</li>")
+
+    $("table#my-pie-list").append("<tr><td class='premium'>" + topping + "</td><td><button type='button' class='btn btn-info btn-xs' id='Remove-" + topping + "'><span class='glyphicon glyphicon-trash'></span></button></td><tr>");
+
   });
 
   $("#add-pizza-to-cart").on("click", function () {
@@ -22,7 +23,7 @@ $(document).ready(function() {
       newPizza.delivery = true;
     }
 
-    $("#my-pie-list li").each( function() {
+    $("#my-pie-list td").each( function() {
       if ($(this).attr("class") === "regular") {
         newPizza.toppings.push($(this).text())
       }
@@ -38,7 +39,8 @@ $(document).ready(function() {
                                     "<p>Price: $" + newPizza.cost.toFixed(2) + "</p>"
     );
 
-    //TODO: reset fields after appending
+    resetFields();
+
 
   });
 });

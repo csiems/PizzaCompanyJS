@@ -4,7 +4,7 @@ describe('Pizza', function() {
     expect(testPizza.name).to.equal("Christopher");
     expect(testPizza.address).to.equal("1618 N Killingsworth");
     expect(testPizza.zip).to.equal("97217");
-    expect(testPizza.size).to.equal(12);
+    expect(testPizza.pizzaSize).to.equal(12);
     expect(testPizza.toppings).to.be.empty;
     expect(testPizza.premiumToppings).to.be.empty;
     expect(testPizza.delivery).to.be.false;
