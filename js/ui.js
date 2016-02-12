@@ -15,8 +15,8 @@ $(document).ready(function() {
     var name = $("#new-name").val();
     var address = $("#new-street").val();
     var zip = $("#new-zip").val();
-    var size = $("#select-pizza-size").val();
-    var newPizza = new Pizza(name, address, zip, size)
+    var pizzaSize = $("#select-pizza-size").val();
+    var newPizza = new Pizza(name, address, zip, pizzaSize)
 
     if ( $('#delivery-radio').is(':checked') ) {
       newPizza.delivery = true;
@@ -32,12 +32,10 @@ $(document).ready(function() {
     });
 
     newPizza.calculateCost();
-    console.log(newPizza.cost);
 
-    $("#shopping-cart-list").append("<h3>" + newPizza.size + " inch pizza</h3>" +
-                                    "<ul><li>" + newPizza.toppings + ", " + newPizza.premiumToppings + "</li>" +
-                                    "</ul>" +
-                                    "<p>Price: $" + newPizza.cost + "</p>"
+    $("#shopping-cart-list").append("<h3>" + newPizza.pizzaSize + " inch pizza</h3>" +
+                                    "<p>" + newPizza.toppingsToString() + "</p>" +
+                                    "<p>Price: $" + newPizza.cost.toFixed(2) + "</p>"
     );
 
     //TODO: reset fields after appending

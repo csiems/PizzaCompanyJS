@@ -1,8 +1,8 @@
-function Pizza( name, address, zip, size ) {
+function Pizza( name, address, zip, pizzaSize ) {
   this.name = name;
   this.address = address;
   this.zip = zip;
-  this.size = size;
+  this.pizzaSize = pizzaSize;
   this.toppings = [];
   this.premiumToppings = [];
   this.delivery = false;
@@ -35,13 +35,28 @@ function Pizza( name, address, zip, size ) {
   };
 
   Pizza.prototype.calculateCost = function () {
-    this.cost += this.size - 4;
+    this.cost += this.pizzaSize - 4;
     this.cost += this.toppings.length - 1;
     this.cost += this.premiumToppings.length * 1.5;
     if ( this.delivery ) {
       this.cost += 3;
     }
   };
+
+  Pizza.prototype.toppingsToString = function() {
+    var toppingsAsString = "";
+    for (var i in this.toppings) {
+      toppingsAsString += this.toppings[i] + ", ";
+    }
+    for (var i in this.premiumToppings) {
+      toppingsAsString += this.premiumToppings[i] + ", ";
+    }
+
+    toppingsAsString = toppingsAsString.substr(0, toppingsAsString.length - 1);
+    console.log(toppingsAsString);
+    return toppingsAsString;
+  }
+
 
   function ShoppingCart() {
     this.pizzas = [];
