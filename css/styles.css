@@ -1,0 +1,23 @@
+.container {
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+
+.row {
+  padding: 10px;
+}
+#middle-column {
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  margin: 0 10px;
+  padding: 0 20px;
+}

@@ -12,5 +12,82 @@
   </head>
   <body>
     <div class="container">
+      <div class="col-md-5" id="my-pie-container">
+        <h1>My Pie</h1>
+        <div class="row">
+          <form id="new-contact">
+            <div class="form-group">
+              <label for="new-name">Name:</label>
+              <input type="text" class="form-control" id="new-name" required>
+            </div>
+            <div class="form-group">
+              <label for="new-street">Street Address:</label>
+              <input type="text" class="form-control new-street" required>
+            </div>
+            <div class="form-group">
+              <label for="new-zip">Zip Code:</label>
+              <input type="number" class="form-control new-zip" required>
+            </div>
+          </form>
+        </div>
+
+        <div class="row" id="size-select">
+          <p>Select a size:</p>
+          <select class="form-control form-control-lg" id="select-pizza-size">
+            <option val="10">10-inch</option>
+            <option val="12 Olives">12-inch</option>
+            <option val="14">14-inch</option>
+            <option val="16">16-inch</option>
+          </select>
+        </div>
+        <div class="row" id="topping-select">
+          <p>Choose your toppings on the left</p>
+          <ul id="my-pie-list">
+
+          </ul>
+        </div>
+        <div class="row">
+          <p>Is this for take out or delivery?</p>
+          <form class="form-control form-control-lg" id="select-delivery">
+            <input type="radio" name="pickup-or-delivery" id="takeout-radio" checked="checked">Take Out</input>
+            <input type="radio" name="pickup-or-delivery" id="delivery-radio">Delivery</input>
+          </form>
+        </div>
+        <div class="row">
+          <button type="submit" class="btn" id="add-pizza-to-cart">Add to Cart</button>
+        </div>
+
+
+      </div>
+      <div class="col-md-4" id="middle-column">
+        <div class="row" id="reg-toppings">
+          <h1>Regular Toppings:</h1>
+          <select class="form-control form-control-lg" id="select-reg-toppings">
+            <option val="Pepperoni">Pepperoni</option>
+            <option val="Black Olives">Black Olives</option>
+            <option val="green peppers">green peppers</option>
+            <option val="onions">onions</option>
+          </select>
+          <input type="button" id="add-toppings" value="Add">
+        </div>
+        <div class="row" id="prem-toppings">
+          <h1>Premium Toppings:</h1>
+          <select class="form-control form-control-lg" id="select-prem-toppings">
+            <option val="Grilled Chicken">Grilled Chicken</option>
+            <option val="Kalamata Olives">Kalamata Olives</option>
+            <option val="Roasted Peppers">Roasted Peppers</option>
+            <option val="Anchovies">Anchovies</option>
+          </select>
+          <input type="button" id="add-prem-toppings" value="Add">
+        </div>
+      </div>
+      <div class="col-mid-3" id="cart">
+        <h1>Cart:</h1>
+        <div id="shopping-cart-list">
+
+        </div>
+      </div>
+
+
     </div>
   <body>

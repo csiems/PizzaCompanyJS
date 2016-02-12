@@ -6,6 +6,7 @@ function Pizza( name, address, zip, size ) {
   this.toppings = [];
   this.premiumToppings = [];
   this.delivery = false;
+  this.cost = 0;
 }
 
   Pizza.prototype.addTopping = function ( topping ) {
@@ -29,14 +30,19 @@ function Pizza( name, address, zip, size ) {
     }
   };
 
-  // Pizza.prototype.addDelivery = function (first_argument) {
-  //   // body...
-  // };
-  //
-  // Pizza.prototype.calculateCost = function (first_argument) {
-  //
-  // };
-  //
-  // function ShoppingCart() {
-  //   this.pizzas = [];
-  // }
+  Pizza.prototype.addDelivery = function () {
+    this.delivery = !this.delivery;
+  };
+
+  Pizza.prototype.calculateCost = function () {
+    this.cost += this.size - 4;
+    this.cost += this.toppings.length - 1;
+    this.cost += this.premiumToppings.length * 1.5;
+    if ( this.delivery ) {
+      this.cost += 3;
+    }
+  };
+
+  function ShoppingCart() {
+    this.pizzas = [];
+  }
