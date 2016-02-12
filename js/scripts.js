@@ -8,9 +8,14 @@ function Pizza(name, address, zip, size) {
   this.delivery = false;
 }
 
-  // Pizza.prototype.addTopping = function (topping) {
-  // };
-  //
+  Pizza.prototype.addTopping = function (topping) {
+    this.toppings.push(topping);
+  };
+
+  Pizza.prototype.addPremiumTopping = function (premiumTopping) {
+    this.premiumToppings.push(premiumTopping);
+  };
+
   // Pizza.prototype.removeTopping = function (topping) {
   //   // body...
   // };
