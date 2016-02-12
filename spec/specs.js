@@ -17,4 +17,16 @@ describe('Pizza', function() {
     expect(testPizza.toppings.length).to.equal(1);
     expect(testPizza.premiumToppings.length).to.equal(1);
   });
+
+  it("will remove regular and premium toppings from the pizza", function() {
+    var testPizza = new Pizza("Christopher", "1618 N Killingsworth", "97217", "12-inch");
+    testPizza.addTopping("pepperoni");
+    testPizza.addPremiumTopping("anchovies");
+    testPizza.removeTopping("pepperoni");
+    testPizza.removeTopping("anchovies");
+    expect(testPizza.toppings).to.be.empty;
+    expect(testPizza.premiumToppings).to.be.empty;
+  });
+
+
 });

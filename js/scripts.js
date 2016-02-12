@@ -1,4 +1,4 @@
-function Pizza(name, address, zip, size) {
+function Pizza( name, address, zip, size ) {
   this.name = name;
   this.address = address;
   this.zip = zip;
@@ -8,18 +8,27 @@ function Pizza(name, address, zip, size) {
   this.delivery = false;
 }
 
-  Pizza.prototype.addTopping = function (topping) {
-    this.toppings.push(topping);
+  Pizza.prototype.addTopping = function ( topping ) {
+    this.toppings.push( topping );
   };
 
-  Pizza.prototype.addPremiumTopping = function (premiumTopping) {
-    this.premiumToppings.push(premiumTopping);
+  Pizza.prototype.addPremiumTopping = function ( premiumTopping ) {
+    this.premiumToppings.push( premiumTopping );
   };
 
-  // Pizza.prototype.removeTopping = function (topping) {
-  //   // body...
-  // };
-  //
+  Pizza.prototype.removeTopping = function ( topping ) {
+    for (var i in this.toppings) {
+      if(this.toppings[i]==topping) {
+        this.toppings.splice(i,1);
+      }
+    }
+    for ( var i in this.premiumToppings ) {
+      if( this.premiumToppings[i] == topping ) {
+        this.premiumToppings.splice( i, 1 );
+      }
+    }
+  };
+
   // Pizza.prototype.addDelivery = function (first_argument) {
   //   // body...
   // };
