@@ -8,12 +8,14 @@
     <script src="js/scripts.js" type="text/javascript"></script>
     <script src="js/ui.js" type="text/javascript"></script>
     <meta charset="utf-8">
-    <title></title>
+    <title>Pizza Pie!</title>
   </head>
   <body>
     <div class="container">
+      <div class="page-header">
+        <h1>Pizza Pie!</h1>
+      </div>
       <div class="col-md-5" id="my-pie-container">
-        <h1>My Pie</h1>
         <div class="row">
           <form id="new-contact">
             <div class="form-group">
@@ -34,23 +36,23 @@
         <div class="row" id="size-select">
           <p>Select a size:</p>
           <select class="form-control form-control-lg" id="select-pizza-size">
-            <option value="10">10-inch</option>
-            <option value="12">12-inch</option>
-            <option value="14">14-inch</option>
-            <option value="16">16-inch</option>
+            <option value="10">10-inch ($6.00)</option>
+            <option value="12">12-inch ($8.00)</option>
+            <option value="14">14-inch ($10.00)</option>
+            <option value="16">16-inch ($12.00)</option>
           </select>
         </div>
         <div class="row" id="topping-select">
           <p>Choose your toppings on the left</p>
           <table class="table" id="my-pie-list">
-            <tr><td class="regular">Cheese</td><td><button type="button" class="btn btn-info btn-xs" id="Remove-Cheese"><span class="glyphicon glyphicon-trash"></span></button></td><tr>
+            <tr><td class="regular">Cheese</td><td>+$0.00</td><td><button type="button" class="btn btn-success btn-xs removebutton"><span class="glyphicon glyphicon-trash"></span></button></td><tr>
           </table>
         </div>
         <div class="row">
           <p>Is this for take out or delivery?</p>
           <form class="form-control form-control-lg" id="select-delivery">
-            <input type="radio" name="pickup-or-delivery" id="takeout-radio" checked="checked">Take Out</input>
-            <input type="radio" name="pickup-or-delivery" id="delivery-radio">Delivery</input>
+            <input type="radio" name="pickup-or-delivery" id="takeout-radio" checked="checked">Take Out (+$0.00)</input>
+            <input type="radio" name="pickup-or-delivery" id="delivery-radio">Delivery (+$3.00)</input>
           </form>
         </div>
         <div class="row">
@@ -61,31 +63,55 @@
       </div>
       <div class="col-md-4" id="middle-column">
         <div class="row" id="reg-toppings">
-          <h1>Regular Toppings:</h1>
-          <select class="form-control form-control-lg" id="select-reg-toppings">
-            <option val="Pepperoni">Pepperoni</option>
-            <option val="Black Olives">Black Olives</option>
-            <option val="green peppers">green peppers</option>
-            <option val="onions">onions</option>
-          </select>
-          <input type="button" id="add-reg-toppings" value="Add">
+          <form>
+            <label for="select-reg-toppings">Regular Toppings:</label>
+            <select class="form-control form-control-lg" id="select-reg-toppings">
+              <option>Bacon</option>
+              <option>Italian Sausage</option>
+              <option>Ground Beef</option>
+              <option>Ham</option>
+              <option>Pepperoni</option>
+              <option>Black Olives</option>
+              <option>Extra Cheese</option>
+              <option>Green Peppers</option>
+              <option>Jalapenos</option>
+              <option>Mushrooms</option>
+              <option>Onions</option>
+              <option>Pineapple</option>
+              <option>Spinach</option>
+              <option>Tomatoes</option>
+            </select>
+            <input class="btn btn-success" id="add-reg-toppings" value="Add">
+          </form>
         </div>
+
         <div class="row" id="prem-toppings">
-          <h1>Premium Toppings:</h1>
-          <select class="form-control form-control-lg" id="select-prem-toppings">
-            <option val="Grilled Chicken">Grilled Chicken</option>
-            <option val="Kalamata Olives">Kalamata Olives</option>
-            <option val="Roasted Peppers">Roasted Peppers</option>
-            <option val="Anchovies">Anchovies</option>
-          </select>
-          <input type="button" id="add-prem-toppings" value="Add">
+          <form>
+            <label for="select-prem-toppings">Premium Toppings:</label>
+            <select class="form-control form-control-lg" id="select-prem-toppings">
+              <option>Anchovies</option>
+              <option>Artichoke Hearts</option>
+              <option>Feta Cheese</option>
+              <option>Gorgonzola</option>
+              <option>Grilled Chicken</option>
+              <option>Kalamata Olives</option>
+              <option>Linguica</option>
+              <option>Roasted Peppers</option>
+              <option>Shaved Steak</option>
+            </select>
+            <input class="btn btn-info" id="add-prem-toppings" value="Add">
+          </form>
         </div>
       </div>
-      <div class="col-mid-3" id="cart">
-        <h1>Cart:</h1>
-        <div id="shopping-cart-list">
 
-        </div>
+      <div class="col-mid-3" id="cart">
+        <form>
+          <label for="shopping-cart-list">My Shopping Cart:</label>
+          <div id="shopping-cart-list">
+
+          </div>
+        </form>
+
       </div>
 
 

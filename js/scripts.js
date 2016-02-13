@@ -60,12 +60,7 @@ function Pizza( name, address, zip, pizzaSize ) {
     $("input#new-name").val("");
     $("input#new-street").val("");
     $("input#zip").val("");
-    $("select#select-pizza-size option").val("10-inch");
     $("input.new-state").val("");
     $("table#my-pie-list").empty();
     $("table#my-pie-list").append("<tr><td class='premium'>Cheese</td><td><button type='button' class='btn btn-info btn-xs' id='Remove-Cheese'><span class='glyphicon glyphicon-trash'></span></button></td><tr>");
 }
-
-  function ShoppingCart() {
-    this.pizzas = [];
-  }

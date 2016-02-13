@@ -7,7 +7,6 @@ h2 {
   font-size: 16px;
 }
 
-
 .row {
   padding: 10px;
 }
@@ -15,3 +14,13 @@ h2 {
 td {
   margin: 10px;
 }
+
+.pizza-form {
+    display: inline-block;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 200px;
+}
+
+input {}
