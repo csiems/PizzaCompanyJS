@@ -23,4 +23,8 @@ td {
     width: 200px;
 }
 
-input {}
+#container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
