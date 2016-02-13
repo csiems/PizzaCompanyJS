@@ -36,10 +36,9 @@ $(document).ready(function() {
     });
 
     newPizza.calculateCost();
-    console.log(newPizza.pizzaSize)
 
     $("#shopping-cart-list").append("<div class='pizza-form'" +
-                                      "<h3>" + newPizza.pizzaSize + " inch pizza</h3>" +
+                                      "<h2>" + newPizza.pizzaSize + "-inch pizza</h2>" +
                                       "<p>Toppings: " + newPizza.toppingsToString() + "</p>" +
                                       "<p>Price: $" + newPizza.cost.toFixed(2) + "</p>" +
                                     "</div>"

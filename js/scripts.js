@@ -62,5 +62,5 @@ function Pizza( name, address, zip, pizzaSize ) {
     $("input#zip").val("");
     $("input.new-state").val("");
     $("table#my-pie-list").empty();
-    $("table#my-pie-list").append("<tr><td class='premium'>Cheese</td><td><button type='button' class='btn btn-info btn-xs' id='Remove-Cheese'><span class='glyphicon glyphicon-trash'></span></button></td><tr>");
+    $("table#my-pie-list").append("<tr><td class='regular'>Cheese</td><td><button type='button' class='btn btn-info btn-xs'><span class='glyphicon glyphicon-trash'></span></button></td><tr>");
 }
