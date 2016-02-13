@@ -1,12 +1,12 @@
 $(document).ready(function() {
   $("#add-reg-toppings").on("click", function () {
     var topping = $("#select-reg-toppings").val();
-    $("table#my-pie-list").append("<tr><td class='regular my-pie-list-item'>" + topping + "</td><td>+$1.00</td><td><button type='button' class='btn btn-success btn-xs removebutton'><span class='glyphicon glyphicon-trash'></span></button></td><tr>");
+    $("table#my-pie-list").append("<tr><td class='regular'>" + topping + "</td><td>+$1.00</td><td><button type='button' class='btn btn-success btn-xs removebutton'><span class='glyphicon glyphicon-trash'></span></button></td><tr>");
   });
 
   $("#add-prem-toppings").on("click", function () {
     var topping = $("#select-prem-toppings").val();
-    $("table#my-pie-list").append("<tr><td class='premium my-pie-list-item'>" + topping + "</td><td>+$1.50</td><td><button type='button' class='btn btn-info btn-xs removebutton'><span class='glyphicon glyphicon-trash'></span></button></td><tr>");
+    $("table#my-pie-list").append("<tr><td class='premium'>" + topping + "</td><td>+$1.50</td><td><button type='button' class='btn btn-info btn-xs removebutton'><span class='glyphicon glyphicon-trash'></span></button></td><tr>");
   });
 
 
@@ -29,9 +29,11 @@ $(document).ready(function() {
     $("#my-pie-list td").each( function() {
       if ($(this).attr("class") === "regular") {
         newPizza.addTopping($(this).text())
+        console.log($(this).text());
       }
       if ($(this).attr("class") === "premium") {
         newPizza.addPremiumTopping($(this).text())
+        console.log($(this).text());
       }
     });
 
